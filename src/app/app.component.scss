@@ -1,0 +1,104 @@
+@import '../responsive.mixins.scss';
+@import '../global.mixins.scss';
+
+:host {
+    .video-container video {
+        height: 100%;
+        width: 100%; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+    .title-container {
+        top: 0;
+        z-index: 1;
+        @include item-container(left);
+        .title {
+            align-self: flex-start;
+            height: 225px;
+            @include for-phone-only {
+                height: 165px;
+            }     
+        }
+    }
+
+    .counter-container {
+        z-index: 1;
+        @include item-container(center);
+        @include for-phone-only {
+            align-items: center;
+            padding: 20px;
+        }     
+
+        .counter {
+            position: relative;
+            font-size: 225px;
+            align-self: flex-start;
+            font-family: "Comic Sans MS", "Comic Sans";
+            color: whitesmoke;
+            text-shadow: 2px 2px 15px black;
+
+            @include for-phone-only {
+                font-size: 100px;
+                align-self: auto;
+                top: -20vh;
+                left: 20vw;
+            }     
+        }
+    }
+
+    .sheep-container {
+          @include item-container(center);
+          animation: stackUp 5s linear infinite;
+
+          .sheep {
+              align-self: flex-end;
+              transform: rotate(90deg) translateX(25vw) rotate(-45deg);
+              animation: jump 5s linear infinite;
+              height: 300px;
+              @include for-phone-only {
+                height: 200px;
+            }      
+          }
+    }
+
+    .fence-container {
+        @include item-container(center);
+        z-index: 10;
+
+        .fence {
+            align-self: flex-end;
+            height: 225px;
+            @include for-phone-only {
+                height: 120px;
+            }          
+        }
+    }
+      
+}
+
+
+@keyframes jump {
+    from { 	transform: rotate(0deg) translateX(25vw) rotate(0deg); }
+	to { transform: rotate(-180deg) translateX(25vw) rotate(180deg); }
+}
+
+@keyframes stackUp {
+    from { z-index: 10; }
+	to   { z-index: 11; }
+}
+
+@keyframes shakeMe {
+    2%, 18% { transform: translate3d(-5px, 0, 0); }
+
+    4%, 16% { transform: translate3d(5px, 0, 0); }
+
+    6%, 10%, 14% { transform: translate3d(-5px, 0, 0); }
+
+    8%, 12% { transform: translate3d(5px, 0, 0); }
+    
+    18.1% { transform: translate3d(0px, 0, 0); }
+}
