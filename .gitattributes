@@ -1,2 +1,1 @@
-*.MP filter=lfs diff=lfs merge=lfs -text
-src/assets/videos/farm-night.MP4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
