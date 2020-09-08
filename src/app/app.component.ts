@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { timer } from 'rxjs/internal/observable/timer';
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 
 
 @Component({

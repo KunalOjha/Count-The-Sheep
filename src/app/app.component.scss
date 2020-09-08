@@ -18,7 +18,7 @@
         @include item-container(left);
         .title {
             align-self: flex-start;
-            height: 33vh;
+            height: 25vh;
             @include for-phone-only {
                 height: 165px;
             }     
@@ -35,7 +35,7 @@
 
         .counter {
             position: relative;
-            font-size: 25vh;
+            font-size: 23vh;
             align-self: flex-start;
             font-family: "Comic Sans MS", "Comic Sans";
             color: whitesmoke;
