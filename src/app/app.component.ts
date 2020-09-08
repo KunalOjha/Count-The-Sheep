@@ -11,8 +11,7 @@ import { Howl } from 'howler';
 export class AppComponent implements OnInit {
   count: number = 0;
   sheep = new Howl({
-    src: ['../assets/audio/sheep.wav'],
-    html5: false
+    src: ['../assets/audio/sheep.wav']
   });
 
   ngOnInit() {
@@ -36,8 +35,7 @@ export class AppComponent implements OnInit {
     const sound = new Howl({
       src: ['../assets/audio/night-time.mp3'],
       autoplay: true,
-      loop: true,
-      html5: false
+      loop: true
     });
 
     sound.play();
